@@ -46,7 +46,25 @@ console.log(yearsUntilRetire(1991, 'manoj'));
 // if one statement no return required
 //if multiple parameters paranthesis is required for parameters and return too.
 
+//arrow function dont get this keyword.
+
+// New topic : function calling other functions:
 
 
+function cutFruitInPtieces(fruit) {
+    return fruit * 4;
+}
+
+
+function fruitJuiceProcessor(apple, banana) {
+    //calling the function inside a function:
+    const applePieces = cutFruitInPtieces(apple);
+    const bananaPieces = cutFruitInPtieces(banana);
+
+    const juice = `Juice with ${applePieces} many apples and ${bananaPieces} many bananas please.`;
+    return juice;
+}
+
+console.log(fruitJuiceProcessor(2, 3));
 
 
