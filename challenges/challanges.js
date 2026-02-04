@@ -95,22 +95,20 @@ checkWinner(scoreDolphin, scoreKoalas);
 
 
 /* number 4 =>
-Steven wants to build a very simple tip calculator for whenever he goes eating in a 
-restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 
-300. If the value is different, the tip is 20%. 
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of 
+the bill if the bill value is between 50 and 300, and if the value is different, the tip is 
+20%. 
 Your tasks: 
-1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for 
-this. It's not allowed to use an if/else statement 
-�
-� (If it's easier for you, you can 
-start with an if/else statement, and then try to convert it to a ternary 
-operator!) 
-2. Print a string to the console containing the bill value, the tip, and the final value 
-(bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 
-316.25” 
-Test data: 
-§ Data 1: Test for bill values 275, 40 and 430
-
+1. Write a function 'calcTip' that takes any bill value as an input and returns 
+the corresponding tip, calculated based on the rules above (you can check out 
+the code from first tip calculator challenge if you need to). Use the function 
+type you like the most. Test the function using a bill value of 100 
+2. And now let's use arrays! So create an array 'bills' containing the test data 
+below 
+3. Create an array 'tips' containing the tip value for each bill, calculated from 
+the function you created before 
+4. Bonus: Create an array 'total' containing the total values, so the bill + tip 
+Test data: 125, 555 and 44
 
 */
 
@@ -119,8 +117,18 @@ function tipCalculator(bill) {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
 
 }
-let bill = 900;
-let tip = tipCalculator(bill); // important to pass bill as argument.
-let sum = bill + tip;
-console.log(`The Bill is ${bill} and the tip is ${tip}, please pay total of ${sum}`);
+// let bill = 900;
+// let tip = tipCalculator(bill);
+// important to pass bill as argument.
+// let sum = bill + tip;
+// console.log(`The Bill is ${bill} and the tip is ${tip}, please pay total of ${sum}`);
+
+const bills = [123, 55, 44];
+const tip = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])]
+
+
+const total = [bills[0] + tip[0], bills[1] + tip[1], bills[2] + tip[2]];
+console.log(bills, tip, total);
+
+
 
