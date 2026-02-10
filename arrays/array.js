@@ -61,3 +61,32 @@ for (let i = 0; i < jonas.length; i++) {
 
     console.log(jonas[i], typeof jonas[i]);
 }
+
+// Looping backwards
+
+console.log('----Looping back-----');
+
+const ram = [
+    'Ram',
+    'Nepali',
+    2037 - 1990,
+    'student',
+    ['hari', 'sita', 'Gita'],
+    true
+];
+
+for (let i = ram.length - 1; i >= 0; i--) {
+    console.log(i, ram[i]);
+}
+
+console.log('---loop inside loop---');
+
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`startting exercise..${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`exercise ${exercise} :lifting weight repeition ${rep} 🏋️`);
+    }
+
+}
