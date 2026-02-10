@@ -82,11 +82,31 @@ for (let i = ram.length - 1; i >= 0; i--) {
 console.log('---loop inside loop---');
 
 
-for (let exercise = 1; exercise < 4; exercise++) {
+for (let exercise = 1; exercise < 3; exercise++) {
     console.log(`startting exercise..${exercise}`);
 
-    for (let rep = 1; rep < 6; rep++) {
+    for (let rep = 1; rep < 2; rep++) {
         console.log(`exercise ${exercise} :lifting weight repeition ${rep} 🏋️`);
     }
 
+}
+
+// WHILE LOOP
+
+console.log('using while loop');
+
+let rep = 1;
+while (rep <= 4) {
+    console.log(`WHILE : lifting weight repeition ${rep} 🏋️`);
+    rep++;
+}
+
+//roll a dice and keep rolling until 6
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice} , next roll`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('loop is about to end..');
 }
