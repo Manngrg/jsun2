@@ -33,3 +33,31 @@ for (let i = 0; i < jonas.length; i++) {
     types.push(typeof jonas[i]);
 }
 console.log(types);
+
+const years = [2001, 1990, 1992, 2005];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break statements;
+
+//continue is used to exit the current iteration and continue to next
+// one whereras break completly terminates the array.
+
+console.log('----Only string----');
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] != 'string') continue;
+    console.log(jonas[i],)
+}
+
+console.log('---break--with number-');
+
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] === 'number') break;
+
+    console.log(jonas[i], typeof jonas[i]);
+}
